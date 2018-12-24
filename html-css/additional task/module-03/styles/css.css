@@ -33,12 +33,25 @@ a:hover {
 }
 .ourblock {
   width: 700px;
-  height: 700px;
+  padding: 50px;
   border: 2px solid black;
+  text-align: center;
+  
+  
 }
-.inblock {
-  width: 300px;
+.inblock1 {
+  display: inline-block;
+  width: 100px;
   height: 300px;
   background-color: red;
-  margin-top: 50px;
+  vertical-align: middle;
+  
+}
+.inblock2 {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  vertical-align: middle;
+  
 }
