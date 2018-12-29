@@ -2,13 +2,16 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-size: 0px;
 }
 .wrapper {
   width: 900px;
   margin: 0 auto;
+  font-family: "Playfair Display", serif;
 }
 .header {
-  padding: 75px 0 100px 0;
+  padding: 75px 0 0 0;
+  margin: 0 0 100px 0;
 }
 .header-nav {
   text-align: center;
@@ -18,48 +21,67 @@
 }
 .nav-list-item {
   display: inline-block;
-  margin: 30px;
-  width: 15%;
+}
+.nav-list-item:not(:last-child) {
+  margin-right: 100px;
 }
 .nav-list-item-links {
+  display: block;
   text-transform: uppercase;
-  color: #626262;
+  font-size: 14px;
 }
 .article {
   display: inline-block;
   width: 420px;
   color: #626262;
 }
-.left-artical {
-  margin-right: 56px;
+.article:nth-child(odd) {
+  margin: 0 60px 0 0;
+}
+.article:nth-child(-n + 4) {
+  margin-bottom: 135px;
+}
+.img {
+  width: 420px;
+  height: 280px;
+  margin: 0 0 30px 0;
 }
 .photo-caption {
-  line-height: 70px;
-  height: 70px;
+  display: block;
   font-family: "Ubuntu", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
+  margin: 0 0 30px 0;
 }
 .article-title {
-  padding: 0 0 30px 0;
+  display: block;
   font-size: 30px;
+  margin: 0 0 30px 0;
 }
 .article-text {
-  padding: 0 0 135px 0;
+  font-size: 14px;
 }
-.bottom {
-  display: block;
-  width: 165px;
-  height: 58px;
-  line-height: 58px;
+.div-button {
   text-align: center;
-  border: 1px solid #626262;
-  margin: -85px auto 0 auto;
+  padding: 58px 0 0 0;
+}
+.button {
+  display: inline-block;
+  padding: 24px 36px;
+  background-color: transparent;
   font-size: 20px;
+  border: 1px solid #626262;
+  cursor: pointer;
 }
 a {
   list-style: none;
   text-decoration: none;
   color: #626262;
   font-family: "Playfair Display", serif;
+}
+a:hover,
+a:focus,
+button:hover,
+button:focus {
+  color: rgb(3, 169, 244);
 }
