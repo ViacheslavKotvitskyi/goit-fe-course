@@ -1,8 +1,12 @@
-* {
-  margin: 0;
-  padding: 0;
+html {
   box-sizing: border-box;
-  font-size: 0px;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0px;
+  padding: 0px;
 }
 .wrapper {
   width: 900px;
@@ -13,22 +17,32 @@
   padding: 75px 0 0 0;
   margin: 0 0 100px 0;
 }
-.header-nav {
+.nav-list {
+  font-size: 0px;
   text-align: center;
 }
-.nav-list {
-  list-style: none;
-}
 .nav-list-item {
+  list-style: none;
   display: inline-block;
 }
 .nav-list-item:not(:last-child) {
   margin-right: 100px;
 }
 .nav-list-item-links {
+  list-style: none;
+  text-decoration: none;
+  color: #626262;
+  font-family: "Playfair Display", serif;
   display: block;
   text-transform: uppercase;
   font-size: 14px;
+}
+.nav-list-item-links:hover,
+.nav-list-item-links:focus {
+  color: #03a9f4;
+}
+.main {
+  font-size: 0px;
 }
 .article {
   display: inline-block;
@@ -61,27 +75,17 @@
 .article-text {
   font-size: 14px;
 }
-.div-button {
-  text-align: center;
-  padding: 58px 0 0 0;
-}
 .button {
-  display: inline-block;
-  padding: 24px 36px;
+  width: 164px;
+  height: 60px;
+  display: block;
+  margin: 55px auto 0;
   background-color: transparent;
   font-size: 20px;
   border: 1px solid #626262;
   cursor: pointer;
 }
-a {
-  list-style: none;
-  text-decoration: none;
-  color: #626262;
-  font-family: "Playfair Display", serif;
-}
-a:hover,
-a:focus,
-button:hover,
-button:focus {
-  color: rgb(3, 169, 244);
+.button:hover,
+.button:focus {
+  color: #03a9f4;
 }
