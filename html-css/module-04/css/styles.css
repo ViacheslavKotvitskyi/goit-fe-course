@@ -24,7 +24,8 @@ html {
 
 .logo,
 .nav-links,
-.products-item-links {
+.products-item-links,
+.button {
   text-decoration: none;
 }
 .nav-list,
@@ -37,7 +38,8 @@ html {
 .nav-links,
 .products-img,
 .news-img,
-.products-item-links {
+.products-item-links,
+.button {
   display: block;
 }
 
@@ -62,9 +64,7 @@ html {
 .nav-item {
   float: left;
 }
-.nav-item:first-child > .nav-links {
-  color: #1abc9c;
-}
+
 .nav-item:not(:last-child) {
   margin-right: 35px;
 }
@@ -75,9 +75,18 @@ html {
   letter-spacing: -0.02em;
   color: #000000;
 }
+.nav-links:hover {
+  color: #1abc9c;
+}
+.nav-links:focus {
+  color: #1abc9c;
+}
 
 /* Section PRODUCTS*/
 
+.products {
+  padding-bottom: 130px;
+}
 .products-title,
 .news-title {
   font-family: "RobotoBlack", serif;
@@ -105,9 +114,7 @@ html {
 .products-item:nth-child(-1n + 4) {
   margin-bottom: 30px;
 }
-.products-item:nth-child(n + 5) {
-  margin-bottom: 105px;
-}
+
 .products-item-links {
   background-color:#e9f0fd;
 }
@@ -145,6 +152,9 @@ html {
   letter-spacing: -0.02em;
   font-size: 18px;
 }
+.product-cost::before {
+  content: "$";
+ }
 
 /* Section NEWS*/
 
@@ -184,8 +194,6 @@ html {
   margin-bottom: 19px;
 }
 .button {
-  border: none;
-  display: block;
   width: 159px;
   height: 51px;
   background-color: #4ec6ab;
@@ -194,12 +202,19 @@ html {
   color: #ffffff;
   border-radius: 3px;
   box-shadow: 1px 1.732px 5px 0px rgb(0, 0, 0);
-  margin-bottom: 45px;
   cursor: pointer;
+  text-align: center;
+  line-height: 51px;
 }
 .products-item-links:hover .product-name {
   background-color: rgb(42, 128, 16);
 }
 .products-item-links:hover .product-cost {
+  background-color: rgb(218, 143, 214);
+}
+.button:hover {
+  background-color: rgb(218, 143, 214);
+}
+.button:focus {
   background-color: rgb(218, 143, 214);
 }
