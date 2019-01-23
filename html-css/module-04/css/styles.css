@@ -207,14 +207,20 @@ html {
   line-height: 51px;
 }
 .products-item-links:hover .product-name {
-  background-color: rgb(42, 128, 16);
+  background-color: #1abc9c;
+}
+.products-item-links:focus .product-name {
+  background-color: #1abc9c;
 }
 .products-item-links:hover .product-cost {
-  background-color: rgb(218, 143, 214);
+  background-color: #7fd9c7;
 }
+.products-item-links:focus .product-cost {
+  background-color: #7fd9c7;
+  }
 .button:hover {
-  background-color: rgb(218, 143, 214);
+  background-color:#1abc9c;
 }
 .button:focus {
-  background-color: rgb(218, 143, 214);
+  background-color:#1abc9c;
 }
