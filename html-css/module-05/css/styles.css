@@ -90,35 +90,32 @@ html {
 /* SLIDER */
 
 .slider {
-  position: relative;
-  width: 1110px;
   height: 600px;
+  width: 1600px;
+  position: relative;
   margin: 0 auto;
 }
+
 .slider-img {
   position: absolute;
-  left: -245px;
+  left: 50%;
+  transform: translateX(-50%);
 }
-.slider-item::after {
+.slider-img::before {
+  display: block;
   content: "";
   position: absolute;
   height: 600px;
   width: 1600px;
-  left: -245px;
-  background-color: #000002;
-  opacity: 0.522;
+  background-color: rgba(0, 0, 2, 0.522);
   z-index: 1;
 }
 .slider-text {
   position: absolute;
-  top: 225px;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   z-index: 2;
-  width: 900px;
-  height: 52px;
-  line-height: 52px;
-  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -132,7 +129,8 @@ html {
 }
 .slider-ctrl {
   position: absolute;
-  top: 225px;
+  top: 50%;
+  transform: translateY(-50%);
   border: none;
   background-color: rgba(78, 198, 171, 0.651);
   width: 104px;
@@ -144,10 +142,11 @@ html {
 }
 .ctrl-left {
   background-image: url(../img/Icons/chevron-left.png);
+  left: 245px;
 }
 .ctrl-right {
-  right: 0;
   background-image: url(../img/Icons/chevron-right.png);
+  right: 245px;
 }
 .slider-ctrl:hover {
   background-color: var(--hover);
@@ -316,7 +315,7 @@ html {
   font-family: "OpenSansRegular", serif;
   font-size: 16px;
   line-height: 90px;
-  font-style: normal; 
+  font-style: normal;
 }
 .footer-author-link {
   color: #46bfa9;
