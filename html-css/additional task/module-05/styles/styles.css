@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Task 1 */
+/* 
+.all_page {
+  position: relative;
+  height: 1080px;
+  width: 100%;
+  background-image: url(../img/1920x1080-Hd-Pictures-Download.jpg);
+  
+}
+.all_page::before{
+  content: "";  position: absolute;
+  height: 1080px;
+  width: 100%;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3));
+} */
+
+/* Task 2 */
+
+/* .ext {
+  position: relative;
+  height: 400px;
+  width: 400px;
+  background-color: #424242;
+  margin: 0 auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.item {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: rgb(49, 116, 218);
+}
+.item.col2 {
+  background-color: rgb(80, 164, 185);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.item.col3 {
+  background-color: rgb(185, 25, 14);
+  right: 0;
+}
+.item.col4 {
+  background-color: rgb(202, 200, 96);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.item.col5 {
+  background-color: rgb(41, 207, 50);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.item.col6 {
+  background-color: rgb(118, 10, 128);
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.item.col7 {
+  background-color: rgb(212, 162, 196);
+  left: 0;
+  bottom: 0;
+}
+.item.col8 {
+  background-color: rgb(94, 70, 161);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.item.col9 {
+  background-color: rgb(214, 203, 173);
+  right: 0;
+  bottom: 0;
+} */

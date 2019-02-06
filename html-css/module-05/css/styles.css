@@ -10,17 +10,18 @@ html {
 }
 :root {
   --hover: #1abc9c;
+  --products-text: #ffffff;
 }
 .wrapper {
+  width: 1140px;
+  padding: 0 15px;
   margin: 0 auto;
+  letter-spacing: -0.02em;
 }
 .clearfix::after {
   display: table;
   content: "";
   clear: both;
-}
-.body {
-  letter-spacing: -0.02em;
 }
 .header {
   padding-top: 38px;
@@ -48,10 +49,7 @@ html {
 }
 
 /* Navigation */
-.header-nav {
-  width: 1110px;
-  margin: 0 auto;
-}
+
 .logo {
   float: left;
   text-transform: uppercase;
@@ -91,7 +89,6 @@ html {
 
 .slider {
   height: 600px;
-  width: 1600px;
   position: relative;
   margin: 0 auto;
 }
@@ -101,21 +98,23 @@ html {
   left: 50%;
   transform: translateX(-50%);
 }
-.slider-img::before {
+.slider-img > img {
   display: block;
+}
+.slider-img::before {
+  width: 100%;
   content: "";
   position: absolute;
-  height: 600px;
-  width: 1600px;
+  height: 100%;
   background-color: rgba(0, 0, 2, 0.522);
   z-index: 1;
 }
 .slider-text {
   position: absolute;
+  white-space: nowrap;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -135,18 +134,17 @@ html {
   background-color: rgba(78, 198, 171, 0.651);
   width: 104px;
   height: 104px;
-  z-index: 2;
   cursor: pointer;
   background-repeat: no-repeat;
   background-position: center;
 }
 .ctrl-left {
   background-image: url(../img/Icons/chevron-left.png);
-  left: 245px;
+  left: 0;
 }
 .ctrl-right {
   background-image: url(../img/Icons/chevron-right.png);
-  right: 245px;
+  right: 0;
 }
 .slider-ctrl:hover {
   background-color: var(--hover);
@@ -159,7 +157,6 @@ html {
 
 .collection {
   background-color: #e9f0fd;
-  width: 1600px;
   margin: 0 auto;
   padding: 100px 0;
 }
@@ -180,7 +177,6 @@ html {
   margin: 32px auto 0;
 }
 .products-list {
-  width: 1140px;
   margin: 0 auto;
 }
 .products-item {
@@ -267,7 +263,7 @@ html {
   height: 40px;
   line-height: 40px;
   background-color: #323232;
-  color: #ffffff;
+  color: var(--products-text);
   text-transform: uppercase;
   font-family: "RobotoBlack", serif;
   font-size: 18px;
@@ -278,7 +274,7 @@ html {
   line-height: 40px;
   float: right;
   background-color: #8c8c8c;
-  color: #ffffff;
+  color: var(--products-text);;
   text-align: center;
   font-family: "RobotoBlack", serif;
   font-size: 18px;
@@ -305,7 +301,6 @@ html {
 /* FOOTER */
 .footer-cont {
   background-color: rgb(50, 50, 50);
-  width: 1600px;
   height: 90px;
   margin: auto;
   text-align: center;
