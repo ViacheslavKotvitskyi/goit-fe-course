@@ -87,3 +87,62 @@ html {
   right: 0;
   bottom: 0;
 } */
+
+
+.menu{
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  position: relative;
+  width: 80px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: #0f0;
+  border: 1px solid #ff0000;
+  text-align: center;
+}
+.menu-item:hover > .submenu { 
+  display: block; 
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  }
+
+  .submenu-item {
+  
+  width: 80px;
+  height: 20px;
+  font-size: 14px;
+  line-height: 20px;
+  background-color: rgb(0, 26, 255);
+  border: 1px solid #d9e711;
+  text-align: center;
+  }
+
+  .sub-list1 {
+    left: 80px;
+    top: 0;
+  }
+
+  .sub-list2 {
+    left: 80px;
+    top: 0;
+  }
+  .sub-list3 {
+    left: 80px;
+    top: 0;
+  }
+  .sub-list4 {
+    left: 80px;
+    top: 0;
+  }
