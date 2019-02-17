@@ -1,28 +1,28 @@
 @font-face {
   font-family: "Playfair Display";
-  src: url("../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
+  src: url("../../../fonts/Playfair_Display/PlayfairDisplay-Regular.ttf");
 }
 @font-face {
   font-family: "RobotoLight";
-    src: url("../fonts/Roboto/Roboto-Light.ttf");
+    src: url("../../../fonts/Roboto/Ligth/roboto-v18-latin-300.ttf");
 }
 @font-face {
   font-family: "RobotoBlack";
-    src: url("../fonts/Roboto/Roboto-Black.ttf");
+    src: url("../../../fonts/Roboto/Black/roboto-v18-latin-900.ttf");
 }
 @font-face {
   font-family: "OpenSansBold";
-    src: url("../fonts/Open_Sans/OpenSans-Bold.ttf");
+    src: url("../../../fonts/Open_Sans/Bold/open-sans-v15-latin-800.ttf");
 }
 @font-face {
   font-family: "OpenSansSemiBold";
-    src: url("../fonts/Open_Sans/OpenSans-SemiBold.ttf");
+    src: url("../../../fonts/Open_Sans/SemiBold/open-sans-v15-latin-700.ttf");
 }
 @font-face {
   font-family: "OpenSansRegular";
-    src: url("../fonts/Open_Sans/OpenSans-Regular.ttf");
+    src: url("../../../fonts/Open_Sans/Regular/open-sans-v15-latin-regular.ttf");
 }
 @font-face {
   font-family: "OpenSansLight";
-    src: url("../fonts/Open_Sans/OpenSans-Light.ttf");
+    src: url("../../../fonts/Open_Sans/Light/open-sans-v15-latin-300.ttf");
 }

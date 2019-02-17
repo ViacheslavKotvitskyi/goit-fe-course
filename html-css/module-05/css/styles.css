@@ -12,20 +12,16 @@ html {
   --hover: #1abc9c;
   --products-text: #ffffff;
 }
-.wrapper {
+/* .wrapper {
   width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
   letter-spacing: -0.02em;
-}
+} */
 .clearfix::after {
   display: table;
   content: "";
   clear: both;
-}
-.header {
-  padding-top: 38px;
-  padding-bottom: 32px;
 }
 
 .logo,
@@ -49,20 +45,29 @@ html {
 }
 
 /* Navigation */
-
+.header {
+  padding: 40px 15px 28px;
+  width: 1140px;
+  margin: auto;
+}
+.header h1 {
+  margin: 0;
+}
 .logo {
   float: left;
   text-transform: uppercase;
   font-family: "RobotoLight", serif;
   font-size: 30px;
+  line-height: 32px;
   color: #555252;
+  letter-spacing: -0.02em;
 }
 .logo:first-letter {
   font-family: "RobotoBlack", serif;
   color: var(--hover);
 }
 .nav-list {
-  margin: 8px 0 0 0;
+  padding-top: 8px;
   float: right;
 }
 .nav-item {
@@ -88,26 +93,17 @@ html {
 /* SLIDER */
 
 .slider {
+position: relative;
+ 
+}
+.slider-item {
+  min-width: 100vh;
   height: 600px;
-  position: relative;
-  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-.slider-img {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-}
-.slider-img > img {
-  display: block;
-}
-.slider-img::before {
-  width: 100%;
-  content: "";
-  position: absolute;
-  height: 100%;
-  background-color: rgba(0, 0, 2, 0.522);
-  z-index: 1;
+.slider-first {
+  background-image: url("../img/slide4.png");
 }
 .slider-text {
   position: absolute;
@@ -126,6 +122,13 @@ html {
   font-size: 24px;
   font-family: "RobotoLight";
 }
+.ctrl {
+  position: absolute;
+  width: 1110px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .slider-ctrl {
   position: absolute;
   top: 50%;
@@ -140,7 +143,7 @@ html {
 }
 .ctrl-left {
   background-image: url(../img/Icons/chevron-left.png);
-  left: 0;
+  
 }
 .ctrl-right {
   background-image: url(../img/Icons/chevron-right.png);
@@ -157,8 +160,11 @@ html {
 
 .collection {
   background-color: #e9f0fd;
+}
+.wraper {
+  width: 1140px;
   margin: 0 auto;
-  padding: 100px 0;
+  padding: 100px 15px 100px;
 }
 .products-title {
   font-family: "RobotoBlack", serif;
@@ -176,9 +182,7 @@ html {
   display: block;
   margin: 32px auto 0;
 }
-.products-list {
-  margin: 0 auto;
-}
+
 .products-item {
   float: left;
 }
@@ -191,12 +195,15 @@ html {
 .product-item-mask {
   display: none;
   position: absolute;
-  background-color: rgba(0, 0, 0, 0.549);
+  background-image: url(../img/Icons/Mask.png);
+  background-repeat: no-repeat;
+  background-position: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 235px;
-  height: 261px;
+  width: 255px;
+  height: 285px;
+  border: 10px solid rgba(255, 255, 255, 0);
 }
 .mask-icons-list {
   position: absolute;
@@ -207,12 +214,7 @@ html {
   transform: translate(-50%, -50%);
 }
 .mask-icons-item {
-  width: 48px;
-  height: 48px;
-  border: 1px solid #ffffff;
   float: left;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .mask-icons-item:nth-child(-1n + 3) {
   margin-bottom: 10px;
@@ -221,13 +223,20 @@ html {
   margin-right: 10px;
 }
 
-.mask-icons-item:hover {
-  background-color: var(--hover);
+.icon {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
   border: none;
+  background-color: transparent;
+  border: 1px solid #ffffff;
   cursor: pointer;
+  display: block;
 }
 .icon-first {
   background-image: url(../img/Icons/mask-icon-first.png);
+  
 }
 .icon-second {
   background-image: url(../img/Icons/mask-icon-second.png);
@@ -251,10 +260,10 @@ html {
   text-transform: uppercase;
   line-height: 48px;
 }
-.products-caption {
-  width: 255px;
-  height: 40px;
-  background-color: rgb(231, 235, 175);
+.icon:hover {
+  background-color: var(--hover);
+  border-color: var(--hover);
+  cursor: pointer;
 }
 .product-name {
   float: left;
