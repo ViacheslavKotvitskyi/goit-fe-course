@@ -64,6 +64,7 @@ h1 {
   display: flex;
   min-width: 491px;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .nav-item {
   position: relative;
@@ -116,7 +117,6 @@ h1 {
   line-height: 29px;
   color: var(--section-title);
   margin-bottom: 17px;
- 
 }
 .section-title-cursive::first-letter {
   text-transform: uppercase;
@@ -127,7 +127,6 @@ h1 {
   font-size: 30px;
   line-height: 36px;
   color: var(--section-title);
-  
 }
 .section-title::after {
   position: relative;
@@ -139,7 +138,6 @@ h1 {
   left: 50%;
   transform: translateX(-50%);
   top: 40px;
-  
 }
 
 .service-list {
@@ -152,10 +150,33 @@ h1 {
   display: flex;
 }
 
+.service-items::before {
+  content: "";
+  width: 80px;
+  height: 35px;
+  background-image: url(../img/Icons/icon_first.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.service-items:nth-child(2)::before {
+  background-image: url(../img/Icons/icon-second.png);
+}
+.service-items:nth-child(3)::before {
+  background-image: url(../img/Icons/icon-third.png);
+}
+.service-items:nth-child(4)::before {
+  background-image: url(../img/Icons/icon-fourth.png);
+}
+.service-items:nth-child(5)::before {
+  background-image: url(../img/Icons/icon-fifth.png);
+}
+.service-items:nth-child(6)::before {
+  background-image: url(../img/Icons/icon-sixth.png);
+}
 .service-item-text {
   width: 300px;
 }
-
 .text-items-title {
   text-transform: uppercase;
   font-family: "Montserrat-Regular", serif;
@@ -174,43 +195,6 @@ h1 {
   margin-bottom: 89px;
 }
 
-.service-icons {
-  background-image: url(../img/Icons/spritesheet.png);
-  background-repeat: no-repeat;
-  margin: 0 25px;
-}
-.first {
-  width: 32px;
-  height: 31px;
-  background-position: -380px -20px;
-}
-.second {
-  width: 32px;
-  height: 32px;
-  background-position: -164px -20px;
-}
-.third {
-  width: 32px;
-  height: 28px;
-  background-position: -308px -20px;
-}
-.fourth {
-  width: 32px;
-  height: 32px;
-  background-position: -92px -20px;
-}
-.fifth {
-  width: 32px;
-  height: 31px;
-  background-position: -20px -20px;
-}
-
-.sixth {
-  width: 32px;
-  height: 32px;
-  background-position: -236px -20px;
-}
-
 /* section TEAM */
 
 .our-team {
@@ -218,7 +202,7 @@ h1 {
 }
 
 .section-title.team {
-  margin-bottom: 46px;
+  margin-bottom: 92px;
 }
 .section-team-text {
   font-family: "Roboto-Regular", serif;
@@ -256,10 +240,11 @@ h1 {
 }
 .overlay-icons-list {
   display: flex;
-  width: 380px;
-  height: 470px;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ 
 }
 .overlay-icons-items {
   background-color: #fce38a;
@@ -298,10 +283,8 @@ h1 {
 .instagram {
   background-position: -203px -5px;
 }
-.caption {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+
+figcaption p {
   text-align: center;
 }
 .photo-name {
@@ -309,14 +292,12 @@ h1 {
   font-family: "Montserrat-Regular", serif;
   font-size: 14px;
   color: var(--title-text);
+  margin-bottom: 13px;
 }
 .photo-prof {
   font-family: "Roboto-LightItalic", serif;
   font-size: 15px;
-  color: var(--title-text);
-  line-height: 24px;
   color: var(--text);
-  line-height: 24px;
 }
 
 /* FOOTER */
@@ -350,6 +331,7 @@ a > span {
   font-family: "Montserrat-Bold", serif;
   font-size: 14px;
   color: #ffffff;
+  cursor: pointer;
 }
 .input {
   display: block;
