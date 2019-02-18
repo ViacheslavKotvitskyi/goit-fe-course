@@ -62,7 +62,7 @@ h1 {
 
 .nav-list {
   display: flex;
-  width: 491px;
+  min-width: 491px;
   justify-content: space-between;
 }
 .nav-item {
@@ -105,15 +105,18 @@ h1 {
 }
 .section-title {
   text-align: center;
-  margin-bottom: 65px;
+  margin-bottom: 108px;
 }
-
+.section-title span {
+  display: block;
+}
 .section-title-cursive {
   font-family: "KaushanScript-Regular", serif;
   font-size: 24px;
   line-height: 29px;
   color: var(--section-title);
-  margin-bottom: 23px;
+  margin-bottom: 17px;
+ 
 }
 .section-title-cursive::first-letter {
   text-transform: uppercase;
@@ -124,15 +127,19 @@ h1 {
   font-size: 30px;
   line-height: 36px;
   color: var(--section-title);
-  margin-bottom: 43px;
+  
 }
 .section-title::after {
+  position: relative;
   display: block;
   content: "";
   width: 60px;
   height: 3px;
   background-color: var(--hover);
-  margin: 0 auto;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 40px;
+  
 }
 
 .service-list {

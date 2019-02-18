@@ -35,8 +35,7 @@ html {
 .logo,
 .nav-links,
 .products-img,
-.products-item-links,
-.footer-author-link {
+.products-item-links {
   display: block;
 }
 
@@ -48,10 +47,10 @@ html {
   margin: auto;
 }
 .header h1 {
+  float: left;
   margin: 0;
 }
 .logo {
-  float: left;
   text-transform: uppercase;
   font-family: "RobotoLight", serif;
   font-size: 30px;
@@ -63,9 +62,11 @@ html {
   font-family: "RobotoBlack", serif;
   color: var(--hover);
 }
+.nav {
+  float: right;
+}
 .nav-list {
   padding-top: 8px;
-  float: right;
 }
 .nav-item {
   float: left;
@@ -90,8 +91,7 @@ html {
 /* SLIDER */
 
 .slider {
-position: relative;
- 
+  position: relative;
 }
 .slider-item {
   min-width: 100vh;
@@ -140,7 +140,6 @@ position: relative;
 }
 .ctrl-left {
   background-image: url(../img/Icons/chevron-left.png);
-  
 }
 .ctrl-right {
   background-image: url(../img/Icons/chevron-right.png);
@@ -232,7 +231,6 @@ position: relative;
 }
 .icon-first {
   background-image: url(../img/Icons/mask-icon-first.png);
-  
 }
 .icon-second {
   background-image: url(../img/Icons/mask-icon-second.png);
@@ -279,7 +277,7 @@ position: relative;
   line-height: 40px;
   float: right;
   background-color: #8c8c8c;
-  color: var(--products-text);;
+  color: var(--products-text);
   text-align: center;
   font-family: "RobotoBlack", serif;
   font-size: 18px;
@@ -318,5 +316,6 @@ position: relative;
   font-style: normal;
 }
 .footer-author-link {
+  display: inline-block;
   color: #46bfa9;
 }
