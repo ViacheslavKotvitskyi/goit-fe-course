@@ -1,0 +1,133 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+* {
+  outline: 1px solid red;
+}
+.wraper {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  min-height: 65px;
+}
+h1 {
+  margin: 0;
+  color: var(--gold-color);
+  font-family: var(--ff-WisdomScript_Felipa, serif);
+  font-size: 26px;
+  letter-spacing: 0.05em;
+}
+h1:first-letter {
+  text-transform: uppercase;
+}
+.logo,
+.nav-item-link {
+  text-decoration: none;
+}
+.nav-list {
+  list-style: none;
+  width: 485px;
+  display: flex;
+  justify-content: space-between;
+}
+.nav-item-link {
+  font-family: var(--ff-Montserrat-Regular, serif);
+  font-size: 14px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-item-link:hover {
+  color: var(--gold-color);
+}
+
+/* MAIN */
+.services-title {
+text-align: center;
+padding-top: 110px;
+}
+.service-title-upper {
+  line-height: 75px;
+  font-family: var(--ff-Montserrat-Bold, serif);
+  font-size: 40px;
+  letter-spacing: -0.025em;
+  color: var(--main-color);
+}
+.service-title-lower {
+  font-family: var(--ff-Merriweather-Italic, serif);
+  font-size: 16px;
+  color: var(--semi-color);
+}
+
+.service-list {
+  list-style: none;
+  padding-top: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.service-item {
+  width: 290px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-icon {
+  width: 74px;
+  height: 74px;
+
+}
+.first {
+  background-image: url(../img/Icons/icon1.png);
+}
+.second {
+  background-image: url(../img/Icons/icon2.png);
+}
+.third {
+  background-image: url(../img/Icons/icon3.png);
+}
+.service-item-title {
+  line-height: 75px;
+  font-family: var(--ff-Montserrat-Bold, serif);
+  font-size: 18px;
+  color: var(--main-color);
+}
+.service-item-text {
+  font-family: var(--ff-RobotoSlab-Regular, serif);
+  font-size: 14px;
+  color: var(--semi-color);
+  letter-spacing: -0.025em;
+  text-align: center;
+  text-indent: 13px;
+}
+
+
+
+
+
+
+
+
+.div1 {
+  width: 200px;
+  background-color: green;
+  overflow: hidden;
+}
+.div2 {
+  width: 350px;
+  background-color: red;
+ 
+}

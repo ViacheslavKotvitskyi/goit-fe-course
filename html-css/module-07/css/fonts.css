@@ -1,0 +1,35 @@
+@font-face {
+  font-family: "Montserrat-Regular";
+  src: url("../../../fonts/Montserrat/Regular/montserrat-v12-latin-regular.woff") format("woff"), url("../../../fonts/Montserrat/Regular/montserrat-v12-latin-regular.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../../../fonts/Montserrat/600Bold/montserrat-v12-latin-600.woff") format("woff"), url("../../../fonts/Montserrat/600Bold/montserrat-v12-latin-600.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "WisdomScript_Felipa";
+  src: url("../../../fonts/Felipa_WisdomScript/felipa-v6-latin-regular.woff2") format("woff2"),
+       url("../../../fonts/Felipa_WisdomScript/felipa-v6-latin-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Merriweather-Italic";
+  src: url("../../../fonts/Merriweather_DroidSerif/merriweather-v19-latin-italic.woff") format("woff"),
+       url("../../../fonts/Merriweather_DroidSerif/merriweather-v19-latin-italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoSlab-Regular";
+  src: url("../../../fonts/Roboto_Slab/roboto-slab-v7-latin-regular.woff2") format("woff2"),
+       url("../../../fonts/Roboto_Slab/roboto-slab-v7-latin-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
