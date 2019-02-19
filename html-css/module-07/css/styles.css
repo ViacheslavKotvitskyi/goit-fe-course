@@ -24,27 +24,32 @@ html {
   align-items: flex-end;
   min-height: 65px;
 }
+header a {
+  display: block;
+}
 h1 {
   margin: 0;
+}
+h1 a {
+  text-decoration: none;
+  padding-left: 5px;
   color: var(--gold-color);
   font-family: var(--ff-WisdomScript_Felipa, serif);
   font-size: 26px;
   letter-spacing: 0.05em;
 }
-h1:first-letter {
+h1 a:first-letter {
   text-transform: uppercase;
-}
-.logo,
-.nav-item-link {
-  text-decoration: none;
 }
 .nav-list {
   list-style: none;
-  width: 485px;
+  min-width: 485px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .nav-item-link {
+  text-decoration: none;
   font-family: var(--ff-Montserrat-Regular, serif);
   font-size: 14px;
   color: var(--main-color);

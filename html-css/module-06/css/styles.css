@@ -105,6 +105,7 @@ h1 {
   padding-bottom: 82px;
 }
 .section-title {
+  position: relative;
   text-align: center;
   margin-bottom: 108px;
 }
@@ -129,7 +130,7 @@ h1 {
   color: var(--section-title);
 }
 .section-title::after {
-  position: relative;
+  position: absolute;
   display: block;
   content: "";
   width: 60px;
@@ -137,7 +138,7 @@ h1 {
   background-color: var(--hover);
   left: 50%;
   transform: translateX(-50%);
-  top: 40px;
+  top: 110px;
 }
 
 .service-list {
