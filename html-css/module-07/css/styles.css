@@ -8,9 +8,7 @@ html {
   margin: 0;
   padding: 0;
 }
-* {
-  outline: 1px solid red;
-}
+
 .wraper {
   width: 940px;
   margin: 0 auto;
@@ -61,18 +59,25 @@ h1 a:first-letter {
 }
 
 /* MAIN */
+.services {
+  padding: 120px 0;
+}
 .services-title {
 text-align: center;
-padding-top: 110px;
+margin-bottom: 72px;
 }
-.service-title-upper {
-  line-height: 75px;
+.services-title span {
+  display: block;
+}
+.title-upper {
   font-family: var(--ff-Montserrat-Bold, serif);
   font-size: 40px;
   letter-spacing: -0.025em;
   color: var(--main-color);
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
-.service-title-lower {
+.title-lower {
   font-family: var(--ff-Merriweather-Italic, serif);
   font-size: 16px;
   color: var(--semi-color);
@@ -80,35 +85,39 @@ padding-top: 110px;
 
 .service-list {
   list-style: none;
-  padding-top: 75px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 .service-item {
   width: 290px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
 }
-.service-icon {
+.service-item::before {
+  content: "";
+  display: block;
   width: 74px;
   height: 74px;
-
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 3px solid var(--gold-color);
+  border-radius: 50%;
+  margin: 0 auto 24px;
 }
-.first {
-  background-image: url(../img/Icons/icon1.png);
+.first-icon::before {
+  background-image: url(../img/Icons/Icon-Basket.png);
 }
-.second {
-  background-image: url(../img/Icons/icon2.png);
+.second-icon::before {
+  background-image: url(../img/Icons/Icon-Laptop.png);
 }
-.third {
-  background-image: url(../img/Icons/icon3.png);
+.third-icon::before {
+  background-image: url(../img/Icons/Icon-Locked.png);
 }
 .service-item-title {
-  line-height: 75px;
   font-family: var(--ff-Montserrat-Bold, serif);
   font-size: 18px;
   color: var(--main-color);
+  margin-bottom: 17px;
 }
 .service-item-text {
   font-family: var(--ff-RobotoSlab-Regular, serif);
@@ -119,20 +128,91 @@ padding-top: 110px;
   text-indent: 13px;
 }
 
+/* FOOTER */
 
-
-
-
-
-
-
-.div1 {
-  width: 200px;
-  background-color: green;
-  overflow: hidden;
+.footer {
+  height: 676px;
+  min-width: 100vh;
+  background-image: url(../img/Background-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 109px 0 115px;
 }
-.div2 {
-  width: 350px;
-  background-color: red;
- 
+.footer-form {
+  width: 940px;
+  margin: 0 auto;
+
+}
+.form-title {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.form-title span {
+  display: block;
+}
+.form-title .title-upper {
+  color: white;
+}
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+}
+.form ul {
+  list-style: none;
+}
+
+.form-item:not(:last-child) {
+margin-bottom: 30px;
+}
+
+.form-item input,
+.form textarea {
+  width: 455px;
+  height: 50px;
+  border: 1px solid var(--form-color);
+  border-radius: 3px;
+  font-family: var(--ff-Montserrat-Bold, serif);
+  font-size: 14px;
+  color: var(--form-color);
+  padding-left: 20px;
+}
+.form textarea {
+  height: 210px;
+  padding-top: 18px;
+  resize: none;
+ }
+::placeholder {
+  font-family: var(--ff-Montserrat-Bold, serif);
+  font-size: 14px;
+  color: var(--form-color);
+  text-transform: uppercase;
+}
+
+input[name="name"]:invalid:not(:placeholder-shown),
+input[name="email"]:invalid:not(:placeholder-shown),
+textarea[name="message"]:invalid:not(:placeholder-shown) {
+  outline: 1px solid #ff0000;
+}
+input[name="name"]:valid:not(:placeholder-shown),
+input[name="email"]:valid:not(:placeholder-shown),
+textarea[name="message"]:valid:not(:placeholder-shown) {
+  outline: 1px solid #008f00;
+}
+form button {
+  display: block;
+  margin: 30px auto 0;
+  background-color: rgb(254, 209, 54);
+  width: 240px;
+  height: 66px;
+  border: none;
+  border-radius: 3px;
+  font-family: var(--ff-Montserrat-Bold, serif);
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  cursor: pointer;
 }
