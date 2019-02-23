@@ -9,11 +9,6 @@ html {
   padding: 0;
 }
 
-.wraper {
-  width: 940px;
-  margin: 0 auto;
-}
-
 /* HEADER */
 
 .header {
@@ -21,6 +16,8 @@ html {
   justify-content: space-between;
   align-items: flex-end;
   min-height: 65px;
+  width: 940px;
+  margin: 0 auto;
 }
 header a {
   display: block;
@@ -61,15 +58,11 @@ h1 a:first-letter {
 /* MAIN */
 .services {
   padding: 120px 0;
+  width: 940px;
+  margin: 0 auto;
 }
-.services-title {
-text-align: center;
-margin-bottom: 72px;
-}
-.services-title span {
-  display: block;
-}
-.title-upper {
+.title {
+  text-align: center;
   font-family: var(--ff-Montserrat-Bold, serif);
   font-size: 40px;
   letter-spacing: -0.025em;
@@ -77,10 +70,13 @@ margin-bottom: 72px;
   margin-bottom: 16px;
   text-transform: uppercase;
 }
-.title-lower {
+
+.title-text {
+  text-align: center;
   font-family: var(--ff-Merriweather-Italic, serif);
   font-size: 16px;
   color: var(--semi-color);
+  margin-bottom: 72px;
 }
 
 .service-list {
@@ -128,9 +124,9 @@ margin-bottom: 72px;
   text-indent: 13px;
 }
 
-/* FOOTER */
+/* SECTION FORM */
 
-.footer {
+.section-form {
   height: 676px;
   min-width: 100vh;
   background-image: url(../img/Background-img.png);
@@ -139,34 +135,28 @@ margin-bottom: 72px;
   background-size: cover;
   padding: 109px 0 115px;
 }
-.footer-form {
+.wraper-form {
   width: 940px;
   margin: 0 auto;
-
 }
+
 .form-title {
-  text-align: center;
-  margin-bottom: 75px;
-}
-
-.form-title span {
-  display: block;
-}
-.form-title .title-upper {
   color: white;
+}
+.form-title p {
+  margin-bottom: 75px;
 }
 .form {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  
 }
 .form ul {
   list-style: none;
 }
 
 .form-item:not(:last-child) {
-margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .form-item input,
@@ -184,7 +174,7 @@ margin-bottom: 30px;
   height: 210px;
   padding-top: 18px;
   resize: none;
- }
+}
 ::placeholder {
   font-family: var(--ff-Montserrat-Bold, serif);
   font-size: 14px;
@@ -205,7 +195,7 @@ textarea[name="message"]:valid:not(:placeholder-shown) {
 form button {
   display: block;
   margin: 30px auto 0;
-  background-color: rgb(254, 209, 54);
+  background-color: var(--gold-color);
   width: 240px;
   height: 66px;
   border: none;
@@ -215,4 +205,9 @@ form button {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
   cursor: pointer;
+  transition: 0.2s;
+}
+button:hover {
+  transform: scale(1.05);
+
 }
