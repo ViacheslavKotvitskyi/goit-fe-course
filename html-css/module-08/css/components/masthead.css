@@ -27,9 +27,15 @@
   border-radius: 1.5rem;
   width: 9rem;
   height: 3.6rem;
+  transition: 0.2s;
 }
 .reg-list-item:first-child .reg-list-item-link {
   border: none;
+}
+.reg-list-item-link:hover {
+  color: var(--link-color);
+  transform: scale(1.1);
+  border-color: var(--link-color);
 }
 h1 {
   margin-bottom: 3.4rem;
@@ -63,6 +69,10 @@ h1 {
   width: 28rem;
   height: 4rem;
   margin: 0 auto;
+  transition: 0.2s;
+}
+.masthead-link:hover {
+  transform: scale(1.1);
 }
 
 @media screen and (min-width: 768px) {

@@ -14,7 +14,13 @@
   margin-bottom: 2.4rem;
 }
 .partner-item:not(:last-child) {
-margin-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+.partner-item {
+  transition: 0.2s;
+}
+.partner-item:hover {
+  transform: scale(1.1);
 }
 .photo-wraper {
   display: inline-block;
@@ -67,12 +73,19 @@ margin-bottom: 2rem;
   background-color: transparent;
   width: 28rem;
   height: 4rem;
+  font-size: 1.4rem;
   line-height: 4rem;
   margin: 0 auto;
   border: 2px solid var(--link-color);
   color: var(--link-color);
   border-radius: 15px;
   cursor: pointer;
+  transition: 0.2s;
+}
+.partner-link:hover {
+  background-color: var(--link-color);
+  transform: scale(1.1);
+  color: #ffffff;
 }
 @media screen and (min-width:768px) {
   .partner {
@@ -92,6 +105,9 @@ margin-bottom: 2rem;
   .partner-item {
     width: 23.6rem;
   }
+  .partner-item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
   .photo-description {
     padding: 0;
   }
@@ -106,5 +122,8 @@ margin-bottom: 2rem;
   }
   .partner-item {
     width: 22rem;
+  }
+  .partner-item:nth-last-child(-n+4) {
+    margin-bottom: 0;
   }
 }
