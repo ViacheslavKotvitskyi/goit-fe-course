@@ -1,0 +1,22 @@
+html {
+    color: white;
+}
+.first {
+    color: white;
+    background-color: red;
+    /* height:10rem; */
+}
+.second {
+    color: white;
+    display: flex;
+    background-color: blue;
+    /* height: 15rem; */
+}
+.third {
+    background-color: green;
+    /* height: 5rem; */
+}
+.fouth {
+    background-color: yellow;
+    /* height: 25rem; */
+}

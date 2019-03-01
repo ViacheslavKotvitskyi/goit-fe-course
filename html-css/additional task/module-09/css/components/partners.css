@@ -1,0 +1,129 @@
+.partner {
+  padding: 6.6rem 0 5.8rem;
+  font-family: var(--ff-Montserrat-Bold);
+  color: var(--partners-title-color);
+  text-align: center;
+}
+
+.partner-title {
+  font-size: 2.2rem;
+  line-height: 2.2rem;
+  margin-bottom: 1.5rem;
+}
+.partner-list {
+  margin-bottom: 2.4rem;
+}
+.partner-item:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.partner-item {
+  transition: 0.2s;
+}
+.partner-item:hover {
+  transform: scale(1.1);
+}
+.photo-wraper {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 1.8rem;
+}
+
+.photo {
+  border-radius: 50%;
+}
+.photo-wraper::before {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 4px solid #ffffff;
+  border-radius: 50%;
+}
+.icon-tv::before {
+  background-image: url(../../img/Icons/tv.png);
+}
+.icon-cup::before {
+  background-image: url(../../img/Icons/cup.png);
+}
+.icon-flask::before {
+  background-image: url(../../img/Icons/flask.png);
+}
+.icon-telegram::before {
+  background-image: url(../../img/Icons/telegram.png);
+}
+
+.photo-name {
+  font-family: var(--ff-Montserrat-Bold);
+  color: var(--partners-title-color);
+  font-size: 1.4rem;
+  margin-bottom: 1.8rem;
+}
+.photo-description {
+  font-family: var(--ff-Roboto-Light);
+  color: var(--partners-text-color);
+  font-size: 1.4rem;
+  padding: 0 6rem;
+  line-height: 1.7rem;
+}
+.partner-link {
+  background-color: transparent;
+  width: 28rem;
+  height: 4rem;
+  font-size: 1.4rem;
+  line-height: 4rem;
+  margin: 0 auto;
+  border: 2px solid var(--link-color);
+  color: var(--link-color);
+  border-radius: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.partner-link:hover {
+  background-color: var(--link-color);
+  transform: scale(1.1);
+  color: #ffffff;
+}
+@media screen and (min-width:768px) {
+  .partner {
+    padding: 6.6rem 0 4rem;
+    width: 49rem;
+    margin: 0 auto;
+  }
+  .partner-title {
+    margin-bottom: 3.1rem;
+  }
+  .partner-list {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .partner-item {
+    width: 23.6rem;
+  }
+  .partner-item:nth-last-child(-n+2) {
+    margin-bottom: 0;
+  }
+  .photo-description {
+    padding: 0;
+  }
+  .partner-link {
+    width: 19.3rem;
+  }
+}
+@media screen and (min-width:940px) {
+  .partner {
+    padding: 7rem 0 7.3rem;
+    width: 94rem;
+  }
+  .partner-item {
+    width: 22rem;
+  }
+  .partner-item:nth-last-child(-n+4) {
+    margin-bottom: 0;
+  }
+}
