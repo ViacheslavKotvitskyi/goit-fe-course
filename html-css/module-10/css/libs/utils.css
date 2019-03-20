@@ -1,0 +1,25 @@
+.visuallyhidden {
+    border: 0;
+    clip: (0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1PX;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+.text-s-masthead {
+    color: var(--masthead-color);
+    font-family: var(--ff-Montserrat-Bold, serif);
+}
+.title-s-partners {
+    color: var(--partners-title-color);
+    font-family: var(--ff-Montserrat-Bold, serif);
+}
+.text-s-partners {
+    color: var(--partners-text-color);
+    font-family: var(--ff-Roboto-Light, serif);
+}
