@@ -7,7 +7,7 @@ let message;
 
 const requestPassword = prompt('Введите пароль!');
 
-if(requestPassword === null) {mesage = 'Отменено пользователем!'}
+if(requestPassword === null) {message = 'Отменено пользователем!'}
 else if(requestPassword !== ADMIN_PASSWORD) {message = 'Доступ запрещен, неверный пароль!'}
 else {message = 'Добро пожаловать!'}
 
