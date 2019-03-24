@@ -6,13 +6,16 @@ const ADMIN_PASSWORD = 'm4ng0h4ckz';
 let message;
 
 const requestPassword = prompt('Введите пароль!');
+const canselUserMessage = 'Отменено пользователем!';
+const falsePasswordMessage = 'Доступ запрещен, неверный пароль!';
+const welcomeMessage = 'Добро пожаловать!';
 
 if (requestPassword === null) {
-  message = 'Отменено пользователем!';
+  message = canselUserMessage;
 } else if (requestPassword !== ADMIN_PASSWORD) {
-  message = 'Доступ запрещен, неверный пароль!';
+  message = falsePasswordMessage;
 } else {
-  message = 'Добро пожаловать!';
+  message = welcomeMessage;
 }
 
 alert(message);
