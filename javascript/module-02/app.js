@@ -2,59 +2,47 @@
 
 /* TASK 1 */
 
-const ADMIN_PASSWORD = 'm4ng0h4ckz';
-let message;
+let input;
+const numbers = [];
+let total = 0;
+while (true) {
+  input = Number(prompt('Введите число'));
+  if (input === 0) {
+    break;
+  } else if (Number.isNaN(input)) {
+    alert('Было введено не число, попробуйте еще раз');
+  } else {
+    numbers.push(input);
+  }
+}
 
-const requestPassword = prompt('Введите пароль!');
-
-if(requestPassword === null) {message = 'Отменено пользователем!'}
-else if(requestPassword !== ADMIN_PASSWORD) {message = 'Доступ запрещен, неверный пароль!'}
-else {message = 'Добро пожаловать!'}
-
-alert(message); 
+for (let i = 0; i < numbers.length; i += 1) {
+  total = total + numbers[i];
+}
+alert(
+  `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
+);
 
 /* TASK 2 */
 
+const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
+const requestPassword = 'Введите пароль!';
+const welcome = 'Добро пожаловать!';
+const endedAttempts = 'У вас закончились попытки, аккаунт заблокирован!';
+let attemptsLeft = 3;
+let inputPassword;
 
-const credits = 23580;
-const pricePerDroid = 3000;
-const quantity = 3;
-
-const totalPrice = pricePerDroid * quantity;
-
-if(totalPrice > credits) {console.log('Недостаточно средств на счету!')}
-else {alert(`Вы купили ${quantity} дроидов, на счету осталось ${credits - totalPrice} кредитов.`)} 
-
-
-/* TASK 3 */
-
-
-const chinaDelivery = 100;
-const southAmericaDelivery = 250;
-const australiaDelivery = 170;
-const indiaDelivery = 80;
-const JamaicaDelivery = 120;
-
-const country = prompt('Укажите страну доставки');
-
-switch(country) {
-    case 'Китай':
-    alert(`Доставка в ${country} будет стоить ${chinaDelivery} кредитов`);
+while (true) {
+  inputPassword = prompt(requestPassword);
+  if (passwords.includes(inputPassword)) {
+    alert(welcome);
     break;
-    case 'Южная Америка':
-    alert(`Доставка в ${country} будет стоить ${southAmericaDelivery} кредитов`);
+  } else if (inputPassword === null) {
     break;
-    case 'Австралия':
-    alert(`Доставка в ${country} будет стоить ${australiaDelivery} кредитов`);
+  } else if (attemptsLeft === 1) {
+    alert(endedAttempts);
     break;
-    case 'Индия':
-    alert(`Доставка в ${country} будет стоить ${indiaDelivery} кредитов`);
-    break;
-    case 'Ямайка':
-    alert(`Доставка в ${country} будет стоить ${JamaicaDelivery} кредитов`);
-    break;
-    default:
-    console.log('В вашей стране доставка не доступна');
-    
+  }
+  attemptsLeft -= 1;
+  alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
 }
-
