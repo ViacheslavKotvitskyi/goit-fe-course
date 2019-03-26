@@ -23,24 +23,32 @@ alert(message);
 /* TASK 2 */
 
 const credits = 23580;
-
 const pricePerDroid = 3000;
-let quantity;
-while (true) {
-  quantity = Number(prompt('Сколько дроидов Вы хотите приобрести?'));
 
-  if (
-    (Number.isInteger(quantity) && Math.sign(quantity) > 0) ||
-    quantity === 0
-  ) {
+const notNumberMessage =
+  'Вы ошиблись при вводе. Введите, пожалуйста, целое положительное число!';
+const littleMoneyMessage = 'Недостаточно средств на счету!';
+const requestMessage = 'Сколько дроидов Вы хотите приобрести?';
+
+let quantity;
+
+while (true) {
+  quantity = prompt(requestMessage);
+  quantity = Number(quantity);
+  if (quantity > 0 && Number.isInteger(quantity)) {
     break;
+  } else if (quantity === 0) {
+    break;
+  } else {
+    console.log(Number(quantity));
+    alert(notNumberMessage);
   }
 }
 
 const totalPrice = pricePerDroid * quantity;
 
 if (totalPrice > credits) {
-  console.log('Недостаточно средств на счету!');
+  console.log(littleMoneyMessage);
 } else {
   alert(
     `Вы купили ${quantity} дроидов, на счету осталось ${credits -
@@ -56,6 +64,7 @@ const australiaDelivery = 170;
 const indiaDelivery = 80;
 const JamaicaDelivery = 120;
 
+const defaultMessage = 'В вашей стране доставка не доступна';
 let country = prompt('Укажите страну доставки');
 
 switch (country.toLowerCase()) {
@@ -81,5 +90,5 @@ switch (country.toLowerCase()) {
     );
     break;
   default:
-    console.log('В вашей стране доставка не доступна');
+    console.log(defaultMessage);
 }
