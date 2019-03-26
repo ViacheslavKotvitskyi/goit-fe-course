@@ -3,14 +3,17 @@
 /* TASK 1 */
 
 let input;
+const requestNumberMessage = 'Введите число!';
+const falseNumberMessage = 'Было введено не число, попробуйте еще раз';
 const numbers = [];
 let total = 0;
 while (true) {
-  input = Number(prompt('Введите число'));
+  input = prompt(requestNumberMessage);
+  input = Number(input);
   if (input === 0) {
     break;
   } else if (Number.isNaN(input)) {
-    alert('Было введено не число, попробуйте еще раз');
+    alert(falseNumberMessage);
   } else {
     numbers.push(input);
   }
