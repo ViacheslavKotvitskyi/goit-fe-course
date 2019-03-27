@@ -140,3 +140,10 @@ if (trueResult) {
   alert('Сожалеем, Вы не угадали!');
 } */
 
+/* const array = ['mango', 'poly', 'ajax']; */
+
+const clients = ['Mango', 'Ajax', 'Poly'];
+/* const value = 'Mango'; */
+for ('Mango' of clients) {
+  console.log(value);
+}

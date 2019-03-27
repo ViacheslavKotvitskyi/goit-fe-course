@@ -67,7 +67,10 @@ const JamaicaDelivery = 120;
 const defaultMessage = 'В вашей стране доставка не доступна';
 let country = prompt('Укажите страну доставки');
 
-switch (country.toLowerCase()) {
+country = country.toLowerCase();
+country = country.trim();
+console.log(country);
+switch (country) {
   case 'китай':
     console.log(`Доставка в ${country} будет стоить ${chinaDelivery} кредитов`);
     break;

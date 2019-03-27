@@ -6,15 +6,22 @@ let input;
 const requestNumberMessage = 'Введите число!';
 const falseNumberMessage = 'Было введено не число, попробуйте еще раз';
 const numbers = [];
+const rounding = 1000000000;
 let total = 0;
 while (true) {
   input = prompt(requestNumberMessage);
+  if (Number.isNaN(Number(input))) {
+    input = input.replace(',', '.');
+  }
+
   input = Number(input);
   if (input === 0) {
     break;
   } else if (Number.isNaN(input)) {
     alert(falseNumberMessage);
   } else {
+    input = input * rounding;
+
     numbers.push(input);
   }
 }
@@ -22,9 +29,12 @@ while (true) {
 for (let i = 0; i < numbers.length; i += 1) {
   total = total + numbers[i];
 }
-alert(
-  `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
-);
+total = total / rounding;
+if (total !== 0) {
+  alert(
+    `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
+  );
+}
 
 /* TASK 2 */
 
