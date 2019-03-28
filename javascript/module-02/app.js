@@ -47,7 +47,7 @@ do {
   if (inputPassword === null) {
     break;
   } else if (passwords.includes(inputPassword)) {
-    welcome;
+    alert(welcome);
     break;
   } else {
     attemptsLeft -= 1;
