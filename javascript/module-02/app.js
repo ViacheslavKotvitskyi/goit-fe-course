@@ -2,60 +2,59 @@
 
 /* TASK 1 */
 
-let input;
-const requestNumberMessage = 'Введите число!';
-const falseNumberMessage = 'Было введено не число, попробуйте еще раз';
+const requestNumberMessage = 'Введите целое число!';
+const falseNumberMessage =
+  'Было введено не число, либо не целое число. Попробуйте еще раз!';
 const numbers = [];
-const rounding = 1000000000;
 let total = 0;
-while (true) {
-  input = prompt(requestNumberMessage);
-  if (Number.isNaN(Number(input))) {
-    input = input.replace(',', '.');
+let inputNumber;
+do {
+  inputNumber = prompt(requestNumberMessage);
+  if (inputNumber !== null) {
+    inputNumber = +inputNumber;
+    console.log(inputNumber);
+    if (!Number.isNaN(inputNumber) && Number.isInteger(inputNumber)) {
+      numbers.push(inputNumber);
+    } else {
+      alert(falseNumberMessage);
+    }
+    console.log(numbers);
   }
-
-  input = Number(input);
-  if (input === 0) {
-    break;
-  } else if (Number.isNaN(input)) {
-    alert(falseNumberMessage);
-  } else {
-    input = input * rounding;
-
-    numbers.push(input);
-  }
-}
+} while (inputNumber !== null);
 
 for (let i = 0; i < numbers.length; i += 1) {
+  if (numbers.length <= 0) {
+    break;
+  }
   total = total + numbers[i];
 }
-total = total / rounding;
-if (total !== 0) {
-  alert(
-    `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
-  );
-}
+alert(
+  `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
+);
 
 /* TASK 2 */
 
 const passwords = ['qwerty', '111qwe', '123123', 'r4nd0mp4zzw0rd'];
 const requestPassword = 'Введите пароль!';
 const welcome = 'Добро пожаловать!';
+
 const endedAttempts = 'У вас закончились попытки, аккаунт заблокирован!';
 let attemptsLeft = 3;
 let inputPassword;
 
-while (true) {
+do {
   inputPassword = prompt(requestPassword);
-  if (passwords.includes(inputPassword)) {
-    alert(welcome);
+  if (inputPassword === null) {
     break;
-  } else if (inputPassword === null) {
+  } else if (passwords.includes(inputPassword)) {
+    welcome;
     break;
-  } else if (attemptsLeft === 1) {
-    alert(endedAttempts);
-    break;
+  } else {
+    attemptsLeft -= 1;
+    if (attemptsLeft > 0) {
+      alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
+    } else {
+      alert(endedAttempts);
+    }
   }
-  attemptsLeft -= 1;
-  alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
-}
+} while (attemptsLeft > 0);
