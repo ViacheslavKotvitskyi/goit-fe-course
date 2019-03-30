@@ -6,31 +6,30 @@ const requestNumberMessage = 'Введите целое число!';
 const falseNumberMessage =
   'Было введено не число, либо не целое число. Попробуйте еще раз!';
 const numbers = [];
-let total = 0;
+let total;
 let inputNumber;
-do {
-  inputNumber = prompt(requestNumberMessage);
-  if (inputNumber !== null) {
-    inputNumber = +inputNumber;
-    console.log(inputNumber);
-    if (!Number.isNaN(inputNumber) && Number.isInteger(inputNumber)) {
-      numbers.push(inputNumber);
-    } else {
-      alert(falseNumberMessage);
-    }
-    console.log(numbers);
-  }
-} while (inputNumber !== null);
 
-for (let i = 0; i < numbers.length; i += 1) {
-  if (numbers.length <= 0) {
+while (true) {
+  inputNumber = prompt(requestNumberMessage);
+  if (inputNumber === null) {
     break;
   }
-  total = total + numbers[i];
+  if (!Number.isNaN(+inputNumber) && Number.isInteger(+inputNumber)) {
+    numbers.push(+inputNumber);
+  } else {
+    alert(falseNumberMessage);
+  }
 }
-alert(
-  `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
-);
+
+if (numbers.length > 0) {
+  total = 0;
+  for (let i = 0; i < numbers.length; i += 1) {
+    total = total + numbers[i];
+  }
+  alert(
+    `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
+  );
+}
 
 /* TASK 2 */
 
@@ -42,19 +41,19 @@ const endedAttempts = 'У вас закончились попытки, акка
 let attemptsLeft = 3;
 let inputPassword;
 
-do {
+while (attemptsLeft > 0) {
   inputPassword = prompt(requestPassword);
   if (inputPassword === null) {
     break;
-  } else if (passwords.includes(inputPassword)) {
+  }
+  if (passwords.includes(inputPassword)) {
     alert(welcome);
     break;
-  } else {
-    attemptsLeft -= 1;
-    if (attemptsLeft > 0) {
-      alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
-    } else {
-      alert(endedAttempts);
-    }
   }
-} while (attemptsLeft > 0);
+  attemptsLeft -= 1;
+  if (attemptsLeft > 0) {
+    alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
+  } else {
+    alert(endedAttempts);
+  }
+}
