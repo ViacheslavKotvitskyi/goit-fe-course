@@ -7,19 +7,19 @@ const falseNumberMessage =
   'Было введено не число, либо не целое число. Попробуйте еще раз!';
 const numbers = [];
 let total;
-let inputNumber;
+let input;
 
-while (true) {
-  inputNumber = prompt(requestNumberMessage);
-  if (inputNumber === null) {
+do {
+  input = prompt(requestNumberMessage);
+  if (input === null) {
     break;
   }
-  if (!Number.isNaN(+inputNumber) && Number.isInteger(+inputNumber)) {
-    numbers.push(+inputNumber);
+  if (!Number.isNaN(+input) && Number.isInteger(+input)) {
+    numbers.push(+input);
   } else {
     alert(falseNumberMessage);
   }
-}
+} while (input !== null);
 
 if (numbers.length > 0) {
   total = 0;
