@@ -10,12 +10,12 @@ let total;
 let input;
 
 do {
-  input = prompt(requestNumberMessage);
+  input = +prompt(requestNumberMessage);
   if (input === null) {
     break;
   }
-  if (!Number.isNaN(+input) && Number.isInteger(+input)) {
-    numbers.push(+input);
+  if (!Number.isNaN(input) && Number.isInteger(input)) {
+    numbers.push(input);
   } else {
     alert(falseNumberMessage);
   }
@@ -23,8 +23,8 @@ do {
 
 if (numbers.length > 0) {
   total = 0;
-  for (let i = 0; i < numbers.length; i += 1) {
-    total = total + numbers[i];
+  for (const i of numbers) {
+    total = total + i;
   }
   alert(
     `Общая сумма чисел равна ${total}! Спасибо, что воспользовались нашей супер-считалкой!`,
@@ -41,7 +41,7 @@ const endedAttempts = 'У вас закончились попытки, акка
 let attemptsLeft = 3;
 let inputPassword;
 
-while (attemptsLeft > 0) {
+while (attemptsLeft) {
   inputPassword = prompt(requestPassword);
   if (inputPassword === null) {
     break;
@@ -51,9 +51,18 @@ while (attemptsLeft > 0) {
     break;
   }
   attemptsLeft -= 1;
-  if (attemptsLeft > 0) {
+  /* if (attemptsLeft > 0) {
     alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
   } else {
     alert(endedAttempts);
+  } */
+  /* alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
+  if (!attemptsLeft) {
+    alert(endedAttempts);
+  } */
+  if (!attemptsLeft) {
+    alert(endedAttempts);
+  } else {
+    alert(`Неверный пароль, у вас осталось ${attemptsLeft} попыток`);
   }
 }
