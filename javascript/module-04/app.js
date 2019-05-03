@@ -22,14 +22,10 @@ const notepad = {
     return note;
   },
   deleteNote(id) {
-    const indexObj = this.notes.indexOf(this.findNoteById(id));
-    this.notes.splice(indexObj, 1);
+    this.notes.splice(this.notes.indexOf(this.findNoteById(id)), 1);
   },
   updateNoteContent(id, updatedContent) {
-    const findObject = this.findNoteById(id);
-    const modifyNote = { ...findObject, ...updatedContent };
-    const indexObj = this.notes.indexOf(findObject);
-    return this.notes.splice(indexObj, 1, modifyNote);
+    Object.assign(this.findNoteById(id), updatedContent);
   },
   updateNotePriority(id, priority) {
     const findObject = this.findNoteById(id);
