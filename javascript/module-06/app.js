@@ -1,36 +1,44 @@
 'use strict';
 
-const Notepad = function Notepad(notes = []) {
-  this.notes = notes;
-  Notepad.prototype.getNotes = function() {
-    return this.notes;
+class Notepad {
+  static Priority = {
+    LOW: 0,
+    NORMAL: 1,
+    HIGH: 2,
   };
-  Notepad.prototype.findNoteById = function(id) {
-    for (const obj of this.notes) {
+  constructor(notes = []) {
+    this._notes = notes;
+  }
+  get notes() {
+    return this._notes;
+  }
+
+  findNoteById(id) {
+    for (const obj of this._notes) {
       if (obj.id === id) {
         return obj;
       }
     }
-  };
-  Notepad.prototype.saveNote = function(note) {
-    this.notes.push(note);
+  }
+  saveNote(note) {
+    this._notes.push(note);
     return note;
-  };
-  Notepad.prototype.deleteNote = function(id) {
-    const indexObj = this.notes.indexOf(this.findNoteById(id));
-    this.notes.splice(indexObj, 1);
-  };
-  Notepad.prototype.updateNoteContent = function(id, updatedContent) {
+  }
+  deleteNote(id) {
+    const indexObj = this._notes.indexOf(this.findNoteById(id));
+    this._notes.splice(indexObj, 1);
+  }
+  updateNoteContent(id, updatedContent) {
     return Object.assign(this.findNoteById(id), updatedContent);
-  };
-  Notepad.prototype.updateNotePriority = function(id, priority) {
+  }
+  updateNotePriority(id, priority) {
     const findObject = this.findNoteById(id);
     findObject.priority = priority;
     return findObject;
-  };
-  Notepad.prototype.filterNotesByQuery = function(query) {
+  }
+  filterNotesByQuery(query) {
     let notesIncludesWords = [];
-    for (const obj of this.notes) {
+    for (const obj of this._notes) {
       if (
         obj.title.toLowerCase().includes(query) ||
         obj.body.toLowerCase().includes(query)
@@ -39,23 +47,17 @@ const Notepad = function Notepad(notes = []) {
       }
     }
     return notesIncludesWords;
-  };
-  Notepad.prototype.filterNotesByPriority = function(priority) {
+  }
+  filterNotesByPriority(priority) {
     let notesIncludesPriority = [];
-    for (const obj of this.notes) {
+    for (const obj of this._notes) {
       if (obj.priority === priority) {
         notesIncludesPriority.push(obj);
       }
     }
     return notesIncludesPriority;
-  };
-};
-
-Notepad.Priority = {
-  LOW: 0,
-  NORMAL: 1,
-  HIGH: 2,
-};
+  }
+}
 
 const initialNotes = [
   {
@@ -73,10 +75,10 @@ const initialNotes = [
     priority: Notepad.Priority.NORMAL,
   },
 ];
-
+/*  */
 const notepad = new Notepad(initialNotes);
 
-console.log('Все текущие заметки: ', notepad.getNotes());
+console.log('Все текущие заметки: ', notepad.notes);
 
 notepad.saveNote({
   id: 'id-3',
@@ -94,21 +96,15 @@ notepad.saveNote({
   priority: Notepad.Priority.LOW,
 });
 
-console.log('Все текущие заметки: ', notepad.getNotes());
+console.log('Все текущие заметки: ', notepad.notes);
 
 notepad.updateNotePriority('id-4', Notepad.Priority.NORMAL);
 
-console.log(
-  'Заметки после обновления приоритета для id-4: ',
-  notepad.getNotes(),
-);
+console.log('Заметки после обновления приоритета для id-4: ', notepad.notes);
 
 notepad.updateNotePriority('id-3', Notepad.Priority.LOW);
 
-console.log(
-  'Заметки после обновления приоритета для id-3: ',
-  notepad.getNotes(),
-);
+console.log('Заметки после обновления приоритета для id-3: ', notepad.notes);
 
 console.log(
   'Отфильтровали заметки по ключевому слову "html": ',
@@ -135,8 +131,8 @@ notepad.updateNoteContent('id-3', {
 
 console.log(
   'Заметки после обновления контента заметки с id-3: ',
-  notepad.getNotes(),
+  notepad.notes,
 );
 
 notepad.deleteNote('id-2');
-console.log('Заметки после удаления с id -2: ', notepad.getNotes());
+console.log('Заметки после удаления с id -2: ', notepad.notes);
